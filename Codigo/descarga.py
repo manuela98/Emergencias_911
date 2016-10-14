@@ -6,10 +6,11 @@
 import requests
 import bs4
 import webbrowser
-import numpy as np
-import shutil 
+
+
 
 try:
+   
     archivo = open("tzr.csv", "r") 
     archivo.close()
 except:
@@ -25,12 +26,5 @@ except:
 
 
 
-#--------------------------------------------------------------------
-#			Extraccion de datos
-#--------------------------------------------------------------------
 
-
-
-B=np.loadtxt('tzr.csv', dtype = str, delimiter = ';' and ',')
-print B[0,0]
 
