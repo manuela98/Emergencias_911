@@ -1,3 +1,4 @@
+
 #--------------------------------------------------------------------
 #			Descarga de datos
 #--------------------------------------------------------------------
@@ -6,11 +7,17 @@
 import requests
 import bs4
 import webbrowser
+import os
+import time
 
+
+
+def mover_datos():
+		#Funcion encargada de mover el archivo de texto descargado a la Carpeta actual
+		return os.system('./mv.sh')
 
 
 try:
-   
     archivo = open("tzr.csv", "r") 
     archivo.close()
 except:
@@ -21,7 +28,9 @@ except:
         lineas_a = content('a')
         if lineas_a:
             webbrowser.open(lineas_a[1].string)
-
+	    time.sleep(20)
+	    mover_datos()
+	
 
 
 
