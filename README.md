@@ -17,7 +17,6 @@ Computación Científica de la Universidad de Medellín.
  Para el correcto funcionamiento del código realizado para este proyecto es necesario seguir las siguientes indicaciones:  
 1. Instalar los paquetes __beautifulsoup4__ y __Requests__ en Python: 
  + `pip install beautifulsoup4 Requests`.    
- 
 2. Clonar el repositorio:
  + `git clone https://github.com/manuela98/Emergencias_911_.git`  
 
