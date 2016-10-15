@@ -1,7 +1,7 @@
 #--------------------------------------------------------------------
 #			Extraccion y Consulta de datos 
 #--------------------------------------------------------------------
-from IPython.display import display, Markdown
+
 import numpy as np
 def Datos_necesarios(n,c2):
     Datos =np.loadtxt('tzr.csv', dtype = str, delimiter = ';' and ',')
@@ -17,7 +17,7 @@ def Datos_necesarios(n,c2):
     return h
 
 def Consulta():
-    c=raw_input("Ingrese Tittle,Description,Date,Hour según el dato que desea buscar:")
+    c=raw_input("Ingrese Tittle,Description,Date o Hour segun el dato que desea buscar: ")
     n = raw_input("Ingrese el dato que desea buscar: ")
     print "Buscando... Por favor espere."
     print "Debido al tipo de dato este proceso puede tardar un par de minutos"
