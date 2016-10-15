@@ -14,11 +14,10 @@ Computación Científica de la Universidad de Medellín.
 * Se pretende identificar y determinar que tipo de emergencias son mas frecuentes en el condado de Montgomery,Pensilvania ubicado en Estados Unidos y además de eso, determinar cual es la probabilidad que tiene la linea de atención de emergencias (911) de recibir una llamada de ayuda para determinada causa.
  
 ## Instalación
-
  Para el correcto funcionamiento del código realizado para este proyecto es necesario seguir las siguientes indicaciones:  
 1. Instalar los paquetes __beautifulsoup4__ y __Requests__ en Python: 
- + `pip install beautifulsoup4 Requests`.  
-
+ + `pip install beautifulsoup4 Requests`.    
+ 
 2. Clonar el repositorio:
  + `git clone https://github.com/manuela98/Emergencias_911_.git`  
 
@@ -30,6 +29,5 @@ Para la correcta implementación visite la [Documentación](https://github.com/m
 
 * [Manuela Jaramillo Rendón](https://github.com/manuela98 "Cuenta de Github Manuela")
 * [José Manuel Vergara Álvarez](https://github.com/JosemaUdeM "Cuenta de Github Jose")
-
 
  
