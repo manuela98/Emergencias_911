@@ -22,7 +22,7 @@ Computación Científica de la Universidad de Medellín.
 
 ### NOTA
 
-Para la correcta implementación visite la [Documentación](https://github.com/manuela98/Emergencias_911_/blob/master/Codigo/Documentaci%C3%B3n.ipynb) de este proyecto.
+Para su correcto uso visite la [Documentación](https://github.com/manuela98/Emergencias_911_/blob/master/Codigo/Documentaci%C3%B3n.ipynb) de este proyecto.
 
 # Integrantes
 
