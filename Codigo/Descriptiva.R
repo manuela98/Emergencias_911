@@ -52,7 +52,7 @@ a<-table(datos.csv$Day)
 rst =c(a[1]/Semana[1,1],a[2]/Semana[1,2],a[3]/Semana[1,3],a[4]/Semana[1,4],a[5]/Semana[1,5],a[6]/Semana[1,6],a[7]/Semana[1,7])
 wr="Resumen de llamadas por dia";wr;summary(a)
 g=a/Semana[1,1]
-jpeg=("prom_llamadas_por_dia.jpg")
+jpeg("prom_llamadas_por_dia.jpg")
 barplot(rst, main="Promedio de llamadas por dia", col=rainbow(7))
 dev.off()
 
@@ -67,7 +67,7 @@ w4="Desviacion estandar";w4;sd(g)
 
 
 b<-table(datos.csv$title)
-jpeg=("prom_llamadas_semanales.jpg")
+jpeg("prom_llamadas_semanales.jpg")
 b1<-b/Semana[1,1]
 tr="Resumen de llamadas semanales";tr;summary(b1)
 barplot(b1,main="Promedio de llamadas semanales",col=rainbow(3))
@@ -81,7 +81,7 @@ t4="Desviacion estandar";t4;sd(b1)
 #-----------------------------------------------------------------------------------------------------------------------------
 b2 = b/Semana[1,1]*1/7
 sr="Resumen de llamadas al dia";sr;summary(b2)
-jpeg=("prom_llamadas_al_dia.jpg")
+jpeg("prom_llamadas_al_dia.jpg")
 barplot(b2,main="Promedio de llamadas al dia",col=rainbow(4))
 dev.off()
 s00="Tipo de emergencia donde se presentan mas llamadas al dia";s00;my_mode(datos.csv$title)
@@ -98,7 +98,7 @@ Trafico <- read.csv("Trafico.txt", header = TRUE)
 Traf<-table(Trafico$Dia)
 Tra=Traf/Semana[1,1]
 pr="Resumen de emergencias de trafico por dia";sr;summary(Trafico)
-jpeg=("prom_trafico_al_dia.jpg")
+jpeg("prom_trafico_al_dia.jpg")
 barplot(Tra,main="Promedio de emergencias de trafico al dia",col=rainbow(7))
 dev.off()
 p00="Dia en que se presentan mas emergencias de trafico";p00;my_mode(Trafico$Dia)
