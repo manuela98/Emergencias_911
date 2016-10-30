@@ -1,7 +1,3 @@
-#--------------------------------------------------------------------
-#			Extraccion y Consulta de datos 
-#--------------------------------------------------------------------
-
 import numpy as np
 def Datos_necesarios(n,c2):
     Datos =np.loadtxt('tzr.csv', dtype = str, delimiter = ';' and ',')
@@ -29,8 +25,10 @@ def Consulta():
         c2 = 2
     if c == "Hour":
         c2 = 3
-    title=["Tittle","Description","Date","Hour"]
     h=Datos_necesarios(n,c2)
+    return h
+def mark(h):
+    title=["Tittle","Description","Date","Hour"]  
     p= ""
     for i in title:
         p = p + '|' + i
