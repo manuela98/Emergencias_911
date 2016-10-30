@@ -26,8 +26,8 @@ while u<=2000000:
     outfile.write(str(oj))
     if u==len(ls):
         break
+outfile.close()
 
-outfile.close
 def Numday(x):#Genera un archivo semana.txt 
     Datos =np.loadtxt('tzr.csv', dtype = str, delimiter = ';' and ',')
     necesarios = Datos[1:,[5]]
@@ -57,6 +57,7 @@ for i in d:
     k=Numday(i)
     yu=str(k)+","
     outfile.write(str(yu))
+outfile.write("\n")
 outfile.close()
 def Trafico(): #Genera un archivo Trafico.txt
     outfile=open("Trafico.txt","w")
@@ -104,5 +105,4 @@ def Allergic():#Genera un archivo Fall_victim.txt
             
     return 0
 t = Allergic()
-
 
