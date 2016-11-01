@@ -19,16 +19,16 @@ Computación Científica de la Universidad de Medellín.
  
 ## Instalación
 Para el correcto funcionamiento del código realizado para este proyecto es necesario seguir las siguientes indicaciones:
-+ Instalar los paquetes beautifulsoup4 y Requests en Python:
-      pip install beautifulsoup4 Requests.
-+ Instalar Numpy.
-      sudo pip install numpy
-+ Instalar Ipython.
-      pip install ipython
-+ Instalar R
-      apt install -y r-base
-+ Clonar el repositorio:
-      git clone https://github.com/manuela98/Emergencias_911_.git  
++ Instalar los paquetes beautifulsoup4 y Requests en Python:  
+     pip install beautifulsoup4 Requests.
++ Instalar Numpy.  
+     sudo pip install numpy
++ Instalar Ipython.  
+     pip install ipython
++ Instalar R.  
+     apt install -y r-base
++ Clonar el repositorio:  
+     git clone https://github.com/manuela98/Emergencias_911_.git  
       
 ### NOTA
 
