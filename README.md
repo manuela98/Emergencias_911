@@ -28,7 +28,8 @@ Para el correcto funcionamiento del código realizado para este proyecto es nece
 + Instalar R
       apt install -y r-base
 + Clonar el repositorio:
-      git clone https://github.com/manuela98/Emergencias_911_.git
+      git clone https://github.com/manuela98/Emergencias_911_.git  
+      
 ### NOTA
 
 Para su correcto uso visite la [Documentación](https://github.com/manuela98/Emergencias_911_/blob/master/Codigo/Documentaci%C3%B3n.ipynb) de este proyecto.
