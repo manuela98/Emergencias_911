@@ -157,3 +157,44 @@ res9=(dec-jul)-dev
 res10=(dec-jun)-dev
 
 if (res1<0 | res2<0 | res3<0 | res4<0 | res5<0 | res6<0 | res7<0 | res8<0 | res9<0 | res10<0 | res11<0) print ('Falso')
+    
+
+    
+    
+    
+#--------------------------------------------------------------------------------------
+    
+#  media movil
+y<-table(datos.csv$title)
+w<-table(datos.csv$Day)
+x = filter(w, y, "conv",2,T,NULL)  
+x
+#-----------------------------------------------------------------------------------    
+# Leer los datos de un fichero .csv
+df <- read.table("texto.txt", sep = ",", head = TRUE)
+
+# Correlación Gráfico de dispersión (nube de puntos)
+plot(df$title, df$Day)
+
+## Normalidad de las variables explicativas
+shapiro.test(df$Day)
+
+## Calculamos la correlación entre las varibales a estudiar
+cor(df$title, df$Day)
+
+### Además de calcularla vemos su significación con un test
+cor.test(df$title, df$Day, method = "pearson")
+
+## Calculamos la correlación de una matriz de variables
+ndf <- data.frame(df$title, df$Day, df$Month, df$description)
+cor(ndf, use = "everything", method = "pearson")
+
+## Coeficiente de determinación (R^2)
+cor(ndf, use = "everything")^2
+
+## Hacemos el test de correlaciones para la matriz (reg. multiple)
+library("psych")
+corr.test(ndf, use = "complete", method = "pearson")
+
+
+
