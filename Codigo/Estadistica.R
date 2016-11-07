@@ -164,37 +164,51 @@ if (res1<0 | res2<0 | res3<0 | res4<0 | res5<0 | res6<0 | res7<0 | res8<0 | res9
     
 #--------------------------------------------------------------------------------------
     
-#  media movil
-y<-table(datos.csv$title)
-w<-table(datos.csv$Day)
-x = filter(w, y, "conv",2,T,NULL)  
-x
-#-----------------------------------------------------------------------------------    
-# Leer los datos de un fichero .csv
-df <- read.table("texto.txt", sep = ",", head = TRUE)
+#Ajuste de curvas 
+    
+mens = "Ajuste de curvas-EMS";mens    
+EMS <- read.table("EMS.txt" ,header = TRUE)
+jpeg("EMS.jpg")
+F = EMS$Frecuency
 
-# Correlación Gráfico de dispersión (nube de puntos)
-plot(df$title, df$Day)
+x = EMS$Day
+y = F
 
-## Normalidad de las variables explicativas
-shapiro.test(df$Day)
+splinefun(x, y, method = "fmm")
+spline(x, y, n = 3*length(x), method = "fmm",
+xmin = min(x), xmax = max(x))
+plot(x, y,xlab = "Dia", ylab = "Frecuencia",col='blue')
+lines(spline(x, y))
+dev.off()
 
-## Calculamos la correlación entre las varibales a estudiar
-cor(df$title, df$Day)
+mens1 = "Ajuste de curvas-Traffic";mens1    
+Traffic <- read.table("Traffic.txt" ,header = TRUE)
+jpeg("Traffic.jpg")
+F = Traffic$Frecuency
 
-### Además de calcularla vemos su significación con un test
-cor.test(df$title, df$Day, method = "pearson")
+x = Traffic$Day
+y = F
 
-## Calculamos la correlación de una matriz de variables
-ndf <- data.frame(df$title, df$Day, df$Month, df$description)
-cor(ndf, use = "everything", method = "pearson")
+splinefun(x, y, method = "fmm")
+spline(x, y, n = 3*length(x), method = "fmm",
+xmin = min(x), xmax = max(x))
+plot(x, y,xlab = "Dia", ylab = "Frecuencia",col='blue')
+lines(spline(x, y))
+dev.off()
 
-## Coeficiente de determinación (R^2)
-cor(ndf, use = "everything")^2
 
-## Hacemos el test de correlaciones para la matriz (reg. multiple)
-library("psych")
-corr.test(ndf, use = "complete", method = "pearson")
+mens2 = "Ajuste de curvas-Fire";mens2    
+Fire <- read.table("Fire.txt" ,header = TRUE)
+jpeg("Fire.jpg")
 
+x = Traffic$Day
+y = Fire$Frecuency
+
+splinefun(x, y, method = "fmm")
+spline(x, y, n = 3*length(x), method = "fmm",
+xmin = min(x), xmax = max(x))
+plot(x, y,xlab = "Dia", ylab = "Frecuencia",col='blue')
+lines(spline(x, y))
+dev.off()
 
 
