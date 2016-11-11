@@ -29,10 +29,17 @@ Para el correcto funcionamiento del código realizado para este proyecto es nece
      apt install -y r-base
 + Clonar el repositorio:  
      git clone https://github.com/manuela98/Emergencias_911_.git  
-      
++ Intalar Gnuplot.  
+    apt -y install gnuplot
++ Ahora, para dar soporte al uso de gnuplot en el notebook:  
+    pip install --upgrade --no-cache-dir  
+    git+https://github.com/has2k1/gnuplot_kernel.git@master
 ### NOTA
 
 Para su correcto uso visite la [Documentación](https://github.com/manuela98/Emergencias_911_/blob/master/Codigo/Documentaci%C3%B3n.ipynb) de este proyecto.
+## Reporte Final
+
+Los resultados obtenidos en el desarrollo de este proyecto se muestran en https://github.com/manuela98/Emergencias_911_/blob/master/tex/reporte%20final.pdf
 
 # Integrantes
 
